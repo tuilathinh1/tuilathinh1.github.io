@@ -1,5 +1,9 @@
 # Mr Ben Tea & Coffee — Coffee Shop (Assignment 1)
 
+
+
+Live Site: https://tuilathinh1.github.io/
+
 Site map
 - index.html (Home)
 - about.html (About)
@@ -14,11 +18,12 @@ Features
 - Semantic HTML5 elements, accessible nav
 - Full contact/booking form with required inputs, fieldsets, datalist, select/optgroup, file upload, hidden input, range, meter, output
 - External CSS (assets/css/styles.css) with responsive layout at 768px and CSS variables
-- Images (SVGs) with alt attributes and a figure/figcaption on homepage
+- Images (SVGs) with alt attributes and a figure/figcaption on homepage and some link 
 - Google Maps iframe on `map.html` (replace embed src with real location)
 
 How to run locally
-1. Open `src/index.html` in a browser (no server required). For local fetch of files, you can use a simple static server, e.g., Python:
+No server required — simply open `index.html` in any browser.  
+For local hosting, you can use a simple static server (optional):
 
 ```powershell
 python -m http.server 8000
@@ -34,6 +39,3 @@ AI usage
 
 Testing notes
 - Basic client-side validation included. Form submission is demo (prevents actual network call).
-
-Deployment
-- Publish `src/` on GitHub Pages (set repo Pages to /docs or root) or Netlify by pointing to `src/` as the publish directory.
