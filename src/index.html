@@ -1,0 +1,124 @@
+<!doctype html>
+<!--
+  Doctype: thông báo cho trình duyệt biết đây là tài liệu HTML5.
+  Không nên thay đổi dòng này; để đảm bảo chế độ chuẩn khi render.
+-->
+<html lang="en"> <!-- thuộc tính lang giúp hỗ trợ truy xuất ngôn ngữ & SEO -->
+<head>
+  <!-- Mã hóa ký tự: luôn đặt ở đầu <head> để tránh lỗi hiển thị tiếng Việt -->
+  <meta charset="utf-8">
+
+  <!-- Thiết lập viewport để trang responsive trên thiết bị di động -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Mô tả ngắn cho công cụ tìm kiếm và khi chia sẻ liên kết -->
+  <meta name="description" content="Mr Ben Tea & Coffee — cozy coffee and tea shop, menu, gallery, events and contact.">
+
+  <!-- Tiêu đề xuất hiện trên tab trình duyệt -->
+  <title>Mr Ben Tea & Coffee — Home</title>
+
+  <!-- Favicon: biểu tượng nhỏ trên tab của trình duyệt -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Liên kết tới file CSS: tách phần trình bày (styles) ra khỏi nội dung -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!--
+    Skip link (liên kết bỏ qua): cải thiện khả năng truy cập cho người dùng dùng bàn phím
+    hoặc trình đọc màn hình để nhảy thẳng tới nội dung chính.
+  -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--
+    Header: chứa logo/ thương hiệu và điều hướng chính của website.
+    Thường đặt ở trên cùng của trang và có vai trò lặp lại trên nhiều trang.
+  -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand: link về trang chủ. Giữ <img> và <span> để vừa hiển thị vừa có văn bản cho SEO -->
+      <a href="index.html" class="brand">
+        <!--
+          1) src: đường dẫn tới file ảnh logo (tốt nhất là SVG cho icon sắc nét)
+          2) alt: mô tả ngắn để hỗ trợ truy cập (screen reader) và khi ảnh không tải
+        -->
+        <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-6/480570181_1192430179553316_4162072403333452788_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=A5deiAiEcHsQ7kNvwHaM9D5&_nc_oc=Adn2BDEjdrMqAt8KBGqQihBkfcj_euRUBZjb3IgIYxghnC1Nze17OD4_qemac5ZHoOou4r4_h6PDRvTP_5r9_CDF&_nc_zt=23&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=Nfhge4kMboBUsZABik-8hQ&oh=00_Afen5J3TCyfentYCOSrqX6izod1oQWoGHql_Q4JJ6dI_Iw&oe=68FE2FC7" alt="Mr Ben Tea & Coffee logo" class="logo">
+        <span class="brand-name">Mr Ben Tea & Coffee</span>
+      </a>
+
+      <!-- Navigation: sử dụng aria-label giúp các công cụ hỗ trợ biết mục đích của nav -->
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <!-- Các <li> chứa <a> dẫn tới các trang quan trọng. Đây là cấu trúc cơ bản của menu -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="map.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--
+    Main content: dùng thẻ <main> để đánh dấu nội dung chính của trang.
+    id="main-content" tương ứng với skip-link ở trên.
+  -->
+  <main id="main-content" class="container">
+    <!-- Hero section: phần mở đầu, thường có tiêu đề lớn và lời kêu gọi hành động -->
+    <section class="hero">
+      <!-- Heading chính của trang; một trang chỉ nên có một <h1> để rõ ràng cho SEO -->
+      <h1>Welcome to Mr Ben Tea & Coffee </h1>
+      <p>Your neighborhood tea & coffee shop — quality drink, friendly faces, cozy space.</p>
+      <!-- Nút (link styled as button) dẫn người dùng tới menu -->
+      <p><a class="btn" href="menu.html">See our menu</a></p>
+    </section>
+
+    <!-- Features: giới thiệu các điểm nổi bật; aria-labelledby liên kết tới tiêu đề của section -->
+    <section class="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">What we offer</h2>
+
+      <!-- Sử dụng grid để bố cục 3 cột; lớp CSS sẽ chịu trách nhiệm căn chỉnh -->
+      <div class="grid grid-3">
+        <article>
+          <!-- loading="lazy" trì hoãn tải ảnh để cải thiện hiệu năng -->
+          <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/558976401_1403576635105335_1884875951686322132_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=woMJfFo8hAMQ7kNvwGPmJLZ&_nc_oc=Adm_-kW-QDVF_lS1GORWUARRs7goHUrUTZDWUhD2IYEJCBxi2ynKW0Vh-sC_GotxhMf55HRbwlW91zSP4NzXj8iM&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=TJe_SMKNvWMso3-90mZnbw&oh=00_AfeIGMJGQ_LNbTy0XpnDM8GGaDfCESAhiTpH9MN5sYKXtg&oe=68FE3748" alt="A latte art cup" loading="lazy">
+          <h3>Milk Tea </h3>
+          <p>A silent promise, born in Taiwan's heart, Where rich tea meets sweet milk, a velvet art. With pearls of brown sugar, chewy and bright, It's a sip of pure joy, a bubble of delight.</p>
+        </article>
+
+        <article>
+          <img src="data:image/jpeg;base64,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" alt="Freshly baked pastry" loading="lazy">
+          <h3>Coffee</h3>
+          <p>From sun-drenched beans, a dark elixir flows, It starts the morning, where the vibrant energy grows. A bitter whisper, a creamy, warm delight, Crafted as an Espresso, Latte, or Americano bright..</p>
+        </article>
+
+        <article>
+          <img src="assets/img/shop.svg" alt="Interior of the shop" loading="lazy">
+          <h3>Cozy space &amp; Wi‑Fi</h3>
+          <p>Comfortable seating, plug points and free Wi‑Fi for remote work.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Hình lớn minh họa (figure) kèm chú thích (figcaption) -->
+    <figure class="hero-figure">
+      <img src="assets/img/coffee3.svg" alt="Barista pouring coffee" loading="lazy">
+      <figcaption>Our baristas craft every cup with care.</figcaption>
+    </figure>
+
+  </main>
+
+  <!-- Footer: thông tin bản quyền và link phụ trợ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Mr Ben Tea & Coffee. <a href="policy.html">Policies</a> · <a href="contact.html">Contact</a></p>
+      <p class="credits">Images: created for assignment. Icons: open-source.</p>
+    </div>
+  </footer>
+
+  <!-- Script cuối body để không chặn render nội dung chính; file JS có thể thêm tương tác -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

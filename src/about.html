@@ -1,0 +1,72 @@
+<!doctype html>
+<!--
+  Trang About: mô tả công ty và đội ngũ.
+  Mục tiêu chú thích: giải thích cấu trúc chung của mọi trang (head, header/nav, main, footer).
+-->
+<html lang="en">
+<head>
+  <!-- Mã hóa ký tự và viewport giống các trang khác -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta description: hữu ích cho SEO và khi chia sẻ link -->
+  <meta name="description" content="About Mr Ben Tea & Coffee — our story and team.">
+
+  <!-- Title sẽ hiển thị trên tab trình duyệt; thay đổi theo nội dung trang -->
+  <title>About — Mr Ben Tea & Coffee</title>
+
+  <!-- Liên kết tới CSS chung của site -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- Favicon: biểu tượng nhỏ trên tab trình duyệt -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <!-- Skip link: cải thiện truy cập cho người dùng bàn phím -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header: logo và navigation lặp lại trên mọi trang để người dùng dễ chuyển trang -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Thẻ <a> chứa logo và tên thương hiệu, dẫn về trang chủ -->
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.svg" alt="Mr Ben Tea & Coffee logo" class="logo">
+        <span class="brand-name">Mr Ben Tea & Coffee</span>
+      </a>
+
+      <!-- Navigation chính: dùng aria-label để mô tả cho assistive tech -->
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <!-- aria-current="page" báo hiệu trang hiện tại cho người dùng và screen readers -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="map.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content: id khớp với skip-link để nhảy tới đây -->
+  <main id="main-content" class="container">
+    <h1>About Mr Ben Tea & Coffee</h1>
+
+    <!-- Section: Our story -->
+    <section>
+      <h2>Our story</h2>
+      <p>Founded in 2015 by two friends who love tea & coffee, Ben Tea & Coffee focuses on sustainable sourcing and community.</p>
+    </section>
+
+    <!-- Section: Our Signature Look -->
+    <section>
+      <h2>Our Signature Look</h2>
+      <p>Our café features a cozy, rustic design with reclaimed wood furniture, warm lighting, and local artwork to create a welcoming atmosphere.</p>
+      <div class="image-gallery">
+        <img src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/480526884_1192430202886647_3896553529868690823_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=rGz-rhadGTIQ7kNvwHnAft2&_nc_oc=AdkBXmxXY_SK_HOlpPV7GrPeGE43M7mNkBCheOOIzWYYxHc6CB9sO_JxFcIDU-tchyhbr9Xj9b9Tw6PZ_UCCZmXv&_nc_zt=23&_nc_ht=scontent.fsgn2-6.fna&_nc_gid=TWkVY4TLSXGRZTcB2-R8WQ&oh=00_Aff9c-u8dqj2rFr2RdrORBhB7rpH-XfLQHWGkyQ_bKxD2Q&oe=68FE47CA" alt="Cozy interior of Mr Ben Tea & Coffee">
+      </div>
+    </section>
+
+  <!-- Script chung: thêm tương tác (như xử lý form trên trang Contact) -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

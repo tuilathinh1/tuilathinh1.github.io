@@ -1,0 +1,140 @@
+<!doctype html>
+<!-- Contact page: form đặt chỗ và liên hệ. Có nhiều loại input khác nhau để minh họa HTML forms -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Mr Ben Tea & Coffee — booking and feedback form.">
+  <title>Contact — Mr Ben Tea & Coffee</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.svg" alt="Mr Ben Tea & Coffee logo" class="logo">
+        <span class="brand-name">Mr Ben Tea & Coffee</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="map.html">Location</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact & Booking</h1>
+
+    <!-- Form sử dụng data-netlify làm ví dụ cho hosting Netlify; cũng có honeypot để giảm spam -->
+    <form id="contactForm" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <!-- Hidden input để Netlify nhận diện form khi submit server-side -->
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+
+      <fieldset>
+        <legend>Personal details</legend>
+
+        <!-- required + minlength: thuộc tính HTML giúp validate phía trình duyệt -->
+        <label for="fullname">Full name</label>
+        <input id="fullname" name="fullname" type="text" required minlength="2" placeholder="Your name">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com">
+
+        <label for="phone">Phone</label>
+        <!-- pattern: biểu thức chính quy để kiểm tra định dạng -->
+        <input id="phone" name="phone" type="tel" pattern="[0-9\-\s()+]{7,}" placeholder="+1 555 555 5555">
+
+        <label for="password">Password (demo)</label>
+        <input id="password" name="password" type="password" minlength="6" placeholder="Choose a password">
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Booking & preferences</legend>
+
+        <label for="guests">Number of guests</label>
+        <input id="guests" name="guests" type="number" min="1" max="20" value="2">
+
+        <label for="date">Date</label>
+        <input id="date" name="date" type="date" required>
+
+        <!-- range: thanh trượt; input[type=range] trả về số trong khoảng min-max -->
+        <label for="timeRange">Arrival time (range)</label>
+        <input id="timeRange" name="timeRange" type="range" min="8" max="20" value="12">
+
+        <label for="color">Favorite color (for theme)</label>
+        <input id="color" name="color" type="color" value="#6b4f3f">
+
+        <label for="file">Upload a photo (optional)</label>
+        <input id="file" name="file" type="file" accept="image/*">
+
+        <p>Choose seating:</p>
+        <!-- Radio buttons: cùng name để chỉ chọn 1 giá trị -->
+        <label><input type="radio" name="seating" value="inside" checked> Inside</label>
+        <label><input type="radio" name="seating" value="outside"> Outside</label>
+
+        <!-- Checkbox: có thể chọn nhiều (hoặc 1) -->
+        <label><input type="checkbox" name="newsletter" value="yes"> Subscribe to newsletter</label>
+
+        <label for="occasion">Occasion</label>
+        <select id="occasion" name="occasion">
+          <optgroup label="Regular">
+            <option value="none">None</option>
+            <option value="work">Work meeting</option>
+          </optgroup>
+          <optgroup label="Special">
+            <option value="birthday">Birthday</option>
+            <option value="other">Other</option>
+          </optgroup>
+        </select>
+
+        <!-- Datalist: gợi ý cho input trong khi người dùng gõ -->
+        <label for="coffeeType">Favorite coffee (try autocomplete)</label>
+        <input list="coffees" id="coffeeType" name="coffeeType">
+        <datalist id="coffees">
+          <option value="Latte">
+          <option value="Espresso">
+          <option value="Cold Brew">
+          <option value="Flat White">
+        </datalist>
+
+        <label for="notes">Notes</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Any dietary requirements or notes"></textarea>
+
+        <input type="hidden" name="source" value="website-contact-form">
+      </fieldset>
+
+      <fieldset>
+        <legend>Survey</legend>
+        <label for="progress">How did you hear about us?</label>
+        <!-- Input range đồng bộ với meter và output bằng JS trong main.js -->
+        <input id="progress" name="progress" type="range" min="0" max="100" value="25">
+        <meter id="meter" min="0" max="100" value="25"></meter>
+        <output id="audienceOutput" for="progress">25</output>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Mr Ben Tea & Coffee.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
