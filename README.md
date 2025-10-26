@@ -1,18 +1,39 @@
-## Getting Started
+# Mr Ben Tea & Coffee — Coffee Shop (Assignment 1)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Site map
+- index.html (Home)
+- about.html (About)
+- menu.html (Menu)
+- gallery.html (Gallery)
+- contact.html (Contact — full form)
+- map.html (Map / iframe)
+- policy.html (Policies)
 
-## Folder Structure
+Features
+- 7 HTML pages with consistent navigation
+- Semantic HTML5 elements, accessible nav
+- Full contact/booking form with required inputs, fieldsets, datalist, select/optgroup, file upload, hidden input, range, meter, output
+- External CSS (assets/css/styles.css) with responsive layout at 768px and CSS variables
+- Images (SVGs) with alt attributes and a figure/figcaption on homepage
+- Google Maps iframe on `map.html` (replace embed src with real location)
 
-The workspace contains two folders by default, where:
+How to run locally
+1. Open `src/index.html` in a browser (no server required). For local fetch of files, you can use a simple static server, e.g., Python:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+```powershell
+python -m http.server 8000
+# then open http://localhost:8000/src/index.html
+```
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Credits
+- Images: simple inline SVGs created for assignment
+- Icons: open-source
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+AI usage
+- Designed site structure and generated HTML/CSS/JS with assistance. Include your copy of prompts and edits in your submission.
 
-## Dependency Management
+Testing notes
+- Basic client-side validation included. Form submission is demo (prevents actual network call).
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Deployment
+- Publish `src/` on GitHub Pages (set repo Pages to /docs or root) or Netlify by pointing to `src/` as the publish directory.
